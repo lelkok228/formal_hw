@@ -15,7 +15,7 @@
 
 1. Клонируйте этот репозиторий
 2. Запустите следующие команды в терминали в данном репозитории
-```mkdir build && cd build
-cmake .. && make```
+```mkdir build && cd build```
+```cmake .. && make```
 
-If you want to check tests coverage use ```make testing``` in **build** and check **coverage report** folder
+Если хотите проверить покрытие тестами, то используйте ```make testing``` в **build** и проверьте папку **coverage report**
