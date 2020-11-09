@@ -1,14 +1,21 @@
 # First practical work in Formal Languages and Broadcasts
 
-##### Задача:
+#### Задача:
 
 *(17 вариант)*
 
 На ввод подается язык из символов из {a, b, c, ., +, *} и слово состоящее из {a, b, c}. Программа выдает длину самого длинного суффикса слова, являющегося также суффиксом некоторого слова из языка.
 
-If you want to check tests coverage use ```make testing``` in **build** and check **coverage report** folder
+#### Алгоритм:
 
-### Input:
-the input is 2 strings separated by a space:
-1. first string is regular expression in reverse Polish notation without spaces
-2. second string is a word consisting of letters
+Для каждого регулярного выражения будем хранить все подотрезки слова, которые выводятся, также будем хранить информацию, выводится ли пустое слово, и, наконец, 
+длину наибольшего общего суффикса какого-то слова из языка, полученного по регулярному выражению, и каждого префикса данного слова. С помощью динамического программирования получаем всю эту информацию о сумме регулярных выражениях, конкатенации и звезде Клини.
+
+#### Запуск:
+
+1. Клонируйте этот репозиторий
+2. Запустите следующие команды в терминали в данном репозитории
+```mkdir build && cd build
+cmake .. && make```
+
+If you want to check tests coverage use ```make testing``` in **build** and check **coverage report** folder
