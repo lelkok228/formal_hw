@@ -11,17 +11,19 @@ private:
 
 public:
     DerivedSubstring(const int size_);
-
     DerivedSubstring(char regularExpression, const std::string& word);
+    DerivedSubstring(const vector<vector<bool> >& anotherIsDerived_, bool anotherIsEmptyWordDerived_, const vector<int>& anotherLengthMaxCommonSuffix_);
 
-    DerivedSubstring& operator+=(const DerivedSubstring& other);
+    DerivedSubstring(const DerivedSubstring& another) = default;
+    DerivedSubstring& operator=(const DerivedSubstring& another) = default;
 
-    DerivedSubstring& operator*=(const DerivedSubstring& other);
+    DerivedSubstring& operator+=(const DerivedSubstring& another);
+    DerivedSubstring operator+(const DerivedSubstring& another) const;
+    DerivedSubstring& operator*=(const DerivedSubstring& another);
+    DerivedSubstring operator*(const DerivedSubstring& another) const;
 
-    DerivedSubstring operator*(const DerivedSubstring& second) const;
-
-    bool operator==(const DerivedSubstring& other) const;
-    bool operator!=(const DerivedSubstring& other) const;
+    bool operator==(const DerivedSubstring& another) const;
+    bool operator!=(const DerivedSubstring& another) const;
 
     DerivedSubstring KleeneStar() const;
 
